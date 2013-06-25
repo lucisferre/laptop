@@ -1,0 +1,15 @@
+#!/usr/bin/env zsh
+
+successfully() {
+  $* || (echo "\nfailed" 1>&2 && exit 1)
+}
+
+fancy_echo() {
+  echo "\n$1"
+}
+
+fancy_echo "Setting up Python ..."
+  brew install python --framework
+
+fancy_echo "Setting up Python ..."
+  pip install --user git+git://github.com/Lokaltog/powerline
